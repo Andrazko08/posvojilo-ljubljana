@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: posvojilo-ljubljana
+    env: php
+    plan: free
+    buildCommand: |
+      composer install --no-interaction --prefer-dist --no-progress
+    startCommand: |
+      php -S 0.0.0.0:$PORT -t .
+    envVars:
+      - key: PHP_VERSION
+        value: 8.2
+      - key: APP_ENV
+        value: production
