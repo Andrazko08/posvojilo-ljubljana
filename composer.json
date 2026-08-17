@@ -1,0 +1,7 @@
+{
+  "name": "pevecandraz/posvojilo-ljubljana",
+  "description": "Landing page for Posvojilo Ljubljana with secure form email submission.",
+  "require": {
+    "phpmailer/phpmailer": "^6.9"
+  }
+}
