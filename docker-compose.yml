@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: posvojilo-ljubljana
+    ports:
+      - "8080:80"
+    environment:
+      APP_ENV: production
+      PHP_INI_UPLOAD_MAX_FILESIZE: 16M
+      PHP_INI_POST_MAX_SIZE: 16M
+    volumes:
+      - .:/var/www/html
+    restart: unless-stopped

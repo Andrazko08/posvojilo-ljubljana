@@ -1,9 +1,11 @@
 services:
   - type: web
     name: posvojilo-ljubljana
-    env: docker
+    runtime: docker
     plan: free
+    region: oregon
     dockerfilePath: ./Dockerfile
+    autoDeploy: true
     envVars:
       - key: APP_ENV
         value: production
